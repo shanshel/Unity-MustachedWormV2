@@ -13,16 +13,16 @@ TagManager:
   - UI
   - 
   - 
+  - PostProccess
+  - WormBody
+  - WormHead
+  - WormSmallHead
+  - EnvCollids
   - Planet
+  - EffectByLight
+  - NotEffectByLight
+  - CustomEnvLight
   - Clouds
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
   - 
   - 
   - 
