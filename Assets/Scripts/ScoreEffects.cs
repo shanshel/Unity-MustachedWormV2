@@ -24,8 +24,9 @@ public class ScoreEffects : MonoBehaviour
     }
     public void doPointEffect(Transform target, int comboCount, int pointCount)
     {
+       
         Point pointInst = Instantiate(pointPrefab, target.position, Quaternion.identity);
-        
+     
         if (pointCount > 1)
         {
             pointInst.textMesh.color = new Color(0.09f, 0.25f, 0.85f);
@@ -58,7 +59,7 @@ public class ScoreEffects : MonoBehaviour
         pointInst.transform.DOMoveY(pointInst.transform.position.y + 1f, .4f);
         pointInst.transform.DOScale(0f, .4f).WaitForCompletion();
         GameManager.inst.increaseScore(pointCount + comboCount);
-        Destroy(pointInst.gameObject, .62f);
+        Destroy(pointInst.gameObject, 2f);
 
     }
 

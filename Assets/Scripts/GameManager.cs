@@ -262,4 +262,9 @@ public class GameManager : MonoBehaviour
         yield return null;
     }
 
+    public Vector3 RandomCircle(Vector3 center, float radius)
+    {
+        return (Random.onUnitSphere * radius) + center;
+    }
+
 }

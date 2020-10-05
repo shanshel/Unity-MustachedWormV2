@@ -11,8 +11,10 @@ public class UIManager : MonoBehaviour
 
     public static UIManager inst;
     [SerializeField]
-    TextMeshProUGUI scoreText;
-    public Text bestScoreText, bestComboText, bestLevelText, yourScoreText, yourComboText, yourLevelText;
+    TextMeshProUGUI scoreText, planetNameText, planetLevelText;
+    public Text bestScoreText, bestComboText, bestLevelText,
+        yourScoreText, yourComboText, yourLevelText;
+
 
     public Image mainMenuPanel, gameOverPanel;
 
@@ -134,6 +136,12 @@ public class UIManager : MonoBehaviour
             GameServices.ShowLeaderboardUI();
         }
         */
+    }
+
+    public void setPlanetUIDetails(string planetName)
+    {
+        planetNameText.text = planetName;
+        planetLevelText.text = "Level " + (GameManager.inst.level +1).ToString();
     }
 
 

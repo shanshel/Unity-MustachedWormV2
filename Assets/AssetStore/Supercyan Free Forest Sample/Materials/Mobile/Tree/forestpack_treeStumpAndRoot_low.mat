@@ -122,7 +122,7 @@ Material:
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 10}
+    - _BaseColor: {r: 1, g: 0.869559, b: 0.65471697, a: 10}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorMultiply: {r: 1, g: 1, b: 1, a: 1}
     - _ColorOverride: {r: 1, g: 1, b: 1, a: 0}

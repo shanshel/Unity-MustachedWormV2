@@ -346,6 +346,7 @@ public class PlayerTrail : MonoBehaviour
 
     public void eatBall(Transform target, int pointCount, bool addBodyPart = true)
     {
+      
         if (isReachedMax) return;
         if (lastEat > 0f && lastEat + comboWaitLength >= Time.time)
         {
@@ -363,8 +364,8 @@ public class PlayerTrail : MonoBehaviour
 
 
         lastEat = Time.time;
-   
 
+      
         if (pointCount < 0)
         {
             comboCount = 0;
@@ -379,10 +380,10 @@ public class PlayerTrail : MonoBehaviour
             AudioManager.inst.playEatSFX(comboCount);
 
         }
-
+        
         GameManager.inst.updateMaxCombo(comboCount);
         ScoreEffects.inst.doPointEffect(target, comboCount, pointCount);
-
+       
         if (!addBodyPart)
             return;
       
