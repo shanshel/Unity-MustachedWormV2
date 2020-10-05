@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
-using EasyMobile;
+//using EasyMobile;
 
 public class UIManager : MonoBehaviour
 {
@@ -126,11 +126,14 @@ public class UIManager : MonoBehaviour
 
     public void onScoreButtonClicked()
     {
+        return;
         // Check for initialization before showing leaderboard UI
+        /*
         if (GameServices.IsInitialized())
         {
             GameServices.ShowLeaderboardUI();
         }
+        */
     }
 
 

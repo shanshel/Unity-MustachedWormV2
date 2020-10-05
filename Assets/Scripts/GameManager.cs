@@ -1,4 +1,4 @@
-﻿using EasyMobile;
+﻿//using EasyMobile;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -239,7 +239,7 @@ public class GameManager : MonoBehaviour
         var newScore = score;
         var newMaxCombo = maxCombo;
         var newLevel = level;
-        GameServices.ReportScore(newScore, EM_GameServicesConstants.Leaderboard_HighScore);
+        //GameServices.ReportScore(newScore, EM_GameServicesConstants.Leaderboard_HighScore);
         UIManager.inst.setGameOverScreenInfo(newScore, newMaxCombo, newLevel);
 
         var oldScore = PlayerPrefs.GetInt("topScore", 0);
