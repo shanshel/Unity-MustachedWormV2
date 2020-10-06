@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: -107981364, guid: 741884b37a0234d86bb740e55081cd5f, type: 3}
   m_Name: UDP Settings
   m_EditorClassIdentifier: 
-  UnityProjectID: 
-  UnityClientID: 
-  UnityClientKey: 
-  UnityClientRSAPublicKey: 
-  AppName: 
-  AppSlug: 
-  AppItemId: 
+  UnityProjectID: 813a70f4-87bd-44ce-8d61-89149b2ec015
+  UnityClientID: akmZHQh9-bTMPffvXjZt1A
+  UnityClientKey: c5nWfdxozUcTDJ4bEguwNENAL22JxjbJLWgtRF1xno4
+  UnityClientRSAPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlkZR2hAScJPLDqdFY+x628mVhWWesL9dbjJyi6icN43XeNUlpJzPVv4jHq9BGS+U3p34cCOk6BhxBhWKV/9i0aL7mhzRZpR128bOAiBJIaeYTCoJQJq1PwKK46yqx2uHC4gyCLQxi5TpOMVBFVZ5cy9917NrbiXIdWZJWxELt2a4CgM9ZdUPnUMOCQhYHnucWPLmhl0dCDF1cXmdnqjELL/iDY568XagGiYgEBHDcLblM8SgHQblmYU5lIhLAf/7rZAnavMPZ/V0TsoCpIpeVs8Y4cGNcOdxVIy+NGsax7HPZx3iyl5/Jxe37IjIARE0YquxXy6zDST3xOYndSrBwQIDAQAB
+  AppName: 813a70f4-87bd-44ce-8d61-89149b2ec015
+  AppSlug: b5e417ec-1079-421f-bdd9-6313faa97fb3
+  AppItemId: 5f7cdd49ccb8330022fffe20
   Permission: 

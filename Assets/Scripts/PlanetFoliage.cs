@@ -14,4 +14,9 @@ public class PlanetFoliage
     public GameObject prefab;
     public float offsetRad = 0f;
 
+    public bool isOnTopOfEachOther = false;
+    public int maxOnTop = 3;
+    public float onTopMargin;
+    public float o_minRotation = 0f, o_maxRotation = 80f;
+
 }

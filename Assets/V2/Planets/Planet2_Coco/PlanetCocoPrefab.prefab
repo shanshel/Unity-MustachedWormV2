@@ -45,26 +45,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c34ecca8329c1ff418adae487de4d3ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planetName: Tomato
+  planetName: Desert
   foliage:
-  - count: 10
+  - count: 5
     isRandomScale: 0
     minScale: 0
     maxScale: 0
     prefab: {fileID: 1293421683807582, guid: 006e1a480f4ea3e4291f3018d82bd8e9, type: 3}
     offsetRad: 0
+    isOnTopOfEachOther: 0
+    maxOnTop: 3
+    onTopMargin: 0
+    o_minRotation: 0
+    o_maxRotation: 80
   - count: 5
     isRandomScale: 0
     minScale: 0
     maxScale: 0
     prefab: {fileID: 1740928733226005935, guid: bebd0d1da57c51749a6675cb1167b8e6, type: 3}
     offsetRad: 0.2
+    isOnTopOfEachOther: 0
+    maxOnTop: 3
+    onTopMargin: 0
+    o_minRotation: 0
+    o_maxRotation: 80
   - count: 3
     isRandomScale: 0
     minScale: 0
     maxScale: 0
     prefab: {fileID: 1614466286705140, guid: 35a64689e013f5841a4f22e15899f99a, type: 3}
     offsetRad: 0
+    isOnTopOfEachOther: 0
+    maxOnTop: 3
+    onTopMargin: 0
+    o_minRotation: 0
+    o_maxRotation: 80
 --- !u!1 &3978069747198928000
 GameObject:
   m_ObjectHideFlags: 0
