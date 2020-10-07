@@ -8,4 +8,6 @@ public class EnumsData
     public enum MusicEnum { inGameMusic, mainManuMusic, gameOverMusic }
     public enum PlaceHolderPos { close, far, outter }
     public enum EatableType { normal, better, danger }
+
+    public enum WatchAdOption { NotYet, YesPlayerFinishedWatching, NoPlayerNotInterested }
 }

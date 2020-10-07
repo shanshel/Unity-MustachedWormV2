@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static EnumsData;
 
 public class DeathDetector : MonoBehaviour
 {
-
     private void OnTriggerEnter(Collider other)
     {
         if (!GameManager.inst.isGameStarted || 
@@ -14,6 +14,18 @@ public class DeathDetector : MonoBehaviour
             )
             return;
 
-        GameManager.inst.death();
+
+        GameManager.inst.isAboutToDie = true;
+
+        if (GameManager.inst.numberOfRespawn >= 2)
+        {
+            UnityAdsShan.inst.setPlayerDeciction(WatchAdOption.NoPlayerNotInterested);
+            GameManager.inst.deathCheckBasedonAds();
+        }
+        else
+        {
+            UIManager.inst.showAdsPanel();
+        }
+        
     }
 }

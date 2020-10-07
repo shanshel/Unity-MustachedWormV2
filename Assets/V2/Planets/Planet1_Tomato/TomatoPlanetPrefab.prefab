@@ -70,8 +70,8 @@ MonoBehaviour:
     o_maxRotation: 80
   - count: 3
     isRandomScale: 1
-    minScale: 0.5
-    maxScale: 0.6
+    minScale: 0.4
+    maxScale: 0.5
     prefab: {fileID: 1451074748068950, guid: 7e473d16764048e40986f54d84b14754, type: 3}
     offsetRad: 0
     isOnTopOfEachOther: 0
@@ -94,7 +94,7 @@ MonoBehaviour:
     isRandomScale: 1
     minScale: 0.5
     maxScale: 0.9
-    prefab: {fileID: 100000, guid: f1c3f8e347f55f44e98e7ea73efac66e, type: 3}
+    prefab: {fileID: 8621999646721260404, guid: c3785c2abba232742a67abc64153e450, type: 3}
     offsetRad: 0
     isOnTopOfEachOther: 0
     maxOnTop: 0
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 3978069747198928061}
   - component: {fileID: 3978069747198928062}
   - component: {fileID: 3978069747198928063}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: NewPlanet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

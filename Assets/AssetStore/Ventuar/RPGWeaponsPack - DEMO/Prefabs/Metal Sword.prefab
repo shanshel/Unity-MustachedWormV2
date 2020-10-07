@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4683953496747004}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Metal Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,8 @@ GameObject:
   - component: {fileID: 1635876843535987426}
   - component: {fileID: 8491409766452158760}
   - component: {fileID: 8933007862696001069}
-  m_Layer: 0
+  - component: {fileID: 8733466128063463525}
+  m_Layer: 13
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,3 +113,16 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4763556824515463976}
   m_Mesh: {fileID: 4300000, guid: 0f88d9f6b3ab59549b9ca29527095481, type: 3}
+--- !u!65 &8733466128063463525
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4763556824515463976}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.589538, y: 8.884194, z: 0.23779719}
+  m_Center: {x: 0.025148196, y: 3.4481885, z: 0.024253828}

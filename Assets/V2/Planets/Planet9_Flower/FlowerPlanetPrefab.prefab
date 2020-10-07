@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 3978069747198928061}
   - component: {fileID: 3978069747198928062}
   - component: {fileID: 3978069747198928063}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: NewPlanet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

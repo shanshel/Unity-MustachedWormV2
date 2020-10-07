@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33410001091487670}
   - component: {fileID: 23448333462118356}
   - component: {fileID: 3070105191069061062}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Wooden Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,5 +93,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.969899, y: 6.6856427, z: 1.0689538}
-  m_Center: {x: 0.036046147, y: -0.54476976, z: 0.62341917}
+  m_Size: {x: 3.1131651, y: 6.634241, z: 0.25983334}
+  m_Center: {x: 0.04817024, y: -0.5190675, z: 0.70925885}

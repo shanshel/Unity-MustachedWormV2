@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!135 &1021561496658756258
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051067091740325318}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5042244
+  m_Center: {x: -0.02360974, y: 0.4553485, z: 1.6177229e-15}
 --- !u!1 &2884005895200116589
 GameObject:
   m_ObjectHideFlags: 0
@@ -49,7 +62,7 @@ MonoBehaviour:
   planetName: Cemetery
   foliage:
   - count: 5
-    isRandomScale: 0
+    isRandomScale: 1
     minScale: 0.2
     maxScale: 0.4
     prefab: {fileID: 1099357167472724, guid: 2fd7e9c4494dadd46930fbd7ceafa4df, type: 3}
@@ -61,19 +74,19 @@ MonoBehaviour:
     o_maxRotation: 80
   - count: 3
     isRandomScale: 1
-    minScale: 0.04
-    maxScale: 0.1
+    minScale: 0.3
+    maxScale: 0.4
     prefab: {fileID: 1652445879903190, guid: a690d06fe62ac404abde5af50b65a838, type: 3}
-    offsetRad: 0
+    offsetRad: 0.2
     isOnTopOfEachOther: 0
     maxOnTop: 3
     onTopMargin: 0
     o_minRotation: 0
     o_maxRotation: 80
   - count: 5
-    isRandomScale: 0
-    minScale: 0.04
-    maxScale: 0.1
+    isRandomScale: 1
+    minScale: 0.2
+    maxScale: 0.3
     prefab: {fileID: 1276843288969336, guid: da5cf56a40776974998b59f3775798aa, type: 3}
     offsetRad: 0
     isOnTopOfEachOther: 0
@@ -82,9 +95,9 @@ MonoBehaviour:
     o_minRotation: 0
     o_maxRotation: 80
   - count: 3
-    isRandomScale: 0
-    minScale: 0.04
-    maxScale: 0.1
+    isRandomScale: 1
+    minScale: 0.2
+    maxScale: 0.3
     prefab: {fileID: 1920415727832450, guid: 3e45a41584f57984b83abcb954d23533, type: 3}
     offsetRad: 0
     isOnTopOfEachOther: 0
@@ -104,7 +117,7 @@ GameObject:
   - component: {fileID: 3978069747198928061}
   - component: {fileID: 3978069747198928062}
   - component: {fileID: 3978069747198928063}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: NewPlanet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,6 +244,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pumpkin_Orange_Free_Glowing
       objectReference: {fileID: 0}
+    - target: {fileID: 1427092044887514, guid: c55b813b19a382b439be7ca1f9f21d61, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 1511126228106086, guid: c55b813b19a382b439be7ca1f9f21d61, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -293,6 +310,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c55b813b19a382b439be7ca1f9f21d61, type: 3}
+--- !u!1 &2051067091740325318 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1427092044887514, guid: c55b813b19a382b439be7ca1f9f21d61, type: 3}
+  m_PrefabInstance: {fileID: 2050205773665484828}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2045682848750004888 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4630041402223236, guid: c55b813b19a382b439be7ca1f9f21d61, type: 3}

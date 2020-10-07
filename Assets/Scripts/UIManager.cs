@@ -16,8 +16,8 @@ public class UIManager : MonoBehaviour
         yourScoreText, yourComboText, yourLevelText;
 
 
-    public Image mainMenuPanel, gameOverPanel;
-
+    public Image mainMenuPanel, gameOverPanel, rewardAdsPanel;
+    
     // then where you want the Alpha setting
 
 
@@ -36,10 +36,6 @@ public class UIManager : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-        Debug.Log(Time.time);
-    }
 
 
     public void onLoadGame()
@@ -144,5 +140,25 @@ public class UIManager : MonoBehaviour
         planetLevelText.text = "Level " + (GameManager.inst.level +1).ToString();
     }
 
+    public void showAdsPanel()
+    {
+        Time.timeScale = 0;
+        rewardAdsPanel.gameObject.SetActive(true);
+    }
+    public void hideAdsPanel()
+    {
+        Time.timeScale = 1;
+        rewardAdsPanel.gameObject.SetActive(false);
+    }
 
+    public void onProtectClicked()
+    {
+        UnityAdsShan.inst.showRewardVideo();
+    }
+
+    public void onCancleRewardClicked()
+    {
+        UnityAdsShan.inst.setPlayerDeciction(EnumsData.WatchAdOption.NoPlayerNotInterested);
+        GameManager.inst.deathCheckBasedonAds();
+    }
 }

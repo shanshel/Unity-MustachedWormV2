@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UDP;
+using static EnumsData;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,11 +19,20 @@ public class GameManager : MonoBehaviour
     private bool playedBeforeInCurrentSession = false;
     public int requiredEatCountForNextLevel;
     public int totalEatedCount = 0;
+    public int numberOfRespawn = 0;
+    public bool isAboutToDie = false;
     private void Awake()
     {
-        
+
+      
+
         inst = this;
         //GameAnalytics.Initialize();
+
+
+
+      
+
         return;
         if (inst != null && inst != this)
         {
@@ -37,7 +48,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Application.targetFrameRate = 100;
-        bodySlotPerLevel = 5;
+        bodySlotPerLevel = 7;
         StartCoroutine(loadGame());
     }
 
@@ -68,6 +79,7 @@ public class GameManager : MonoBehaviour
 
     public void startGame()
     {
+        
         //TinySauce.OnGameStarted();
         if (playedBeforeInCurrentSession)
         {
@@ -87,13 +99,14 @@ public class GameManager : MonoBehaviour
 
         EatableManager.inst.onGameStart();
         isGameStarted = true;
+        startPlayerProtection(2.5f);
         StartCoroutine(prepareLevel());
 
 
         
 
         AudioManager.inst.playMusic(EnumsData.MusicEnum.inGameMusic);
-        startPlayerProtection(1.8f);
+       
         //GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, Application.version, "game");
 
         if (playedBeforeInCurrentSession)
@@ -104,19 +117,21 @@ public class GameManager : MonoBehaviour
 
     public void resetGame(bool playAgain)
     {
-   
+
+        
         PlayerTrail.inst.whenPlayResetGame();
 
         totalEatedCount = 0;
         level = 0;
-       
 
+        numberOfRespawn = 0;
         score = 0;
         maxCombo = 0;
         isLevelingUp = false;
         isInProtection = false;
         UIManager.inst.setScore(score);
         playedBeforeInCurrentSession = true;
+        UnityAdsShan.inst.showVideoBreak();
         if (playAgain)
         {
             startGame();
@@ -158,7 +173,7 @@ public class GameManager : MonoBehaviour
 
     private int getExtraFoodLevel()
     {
-        return level * 2;
+        return Mathf.CeilToInt( level * 1.4f );
     }
 
     private int getExtraSlotLevel()
@@ -175,7 +190,7 @@ public class GameManager : MonoBehaviour
         if (slotCountUsed > PlayerTrail.inst.bodyPices.Length)
         {
             slotCountUsed = PlayerTrail.inst.bodyPices.Length;
-            requiredEatCountForNextLevel += 30;
+            requiredEatCountForNextLevel += 20;
         }
         else
         {
@@ -265,6 +280,30 @@ public class GameManager : MonoBehaviour
     public Vector3 RandomCircle(Vector3 center, float radius)
     {
         return (Random.onUnitSphere * radius) + center;
+    }
+
+
+
+
+    public void deathCheckBasedonAds()
+    {
+        if (!GameManager.inst.isAboutToDie) return;
+
+        if (UnityAdsShan.inst.playerWatchDecition == WatchAdOption.YesPlayerFinishedWatching)
+        {
+            GameManager.inst.startPlayerProtection(3f);
+            GameManager.inst.isAboutToDie = false;
+            UnityAdsShan.inst.resetDecideValue();
+            UIManager.inst.hideAdsPanel();
+            numberOfRespawn++;
+        }
+        else if (UnityAdsShan.inst.playerWatchDecition == WatchAdOption.NoPlayerNotInterested)
+        {
+            GameManager.inst.isAboutToDie = false;
+            UnityAdsShan.inst.resetDecideValue();
+            UIManager.inst.hideAdsPanel();
+            death();
+        }
     }
 
 }

@@ -10,9 +10,9 @@ public class EatableMargin : MonoBehaviour
     
     
     [SerializeField]
-    private GameObject childFood;
     public EatableType type;
     public SphereCollider _spCollider;
+    public MeshRenderer _meshRenderer;
     public TextMeshPro pointText;
 
     private Vector3 baseScale;
@@ -34,6 +34,7 @@ public class EatableMargin : MonoBehaviour
             eatPoint = Random.Range(-7, -2);
             pointText.text = eatPoint.ToString();
         }
+      
     }
 
     private void Update()
@@ -60,6 +61,7 @@ public class EatableMargin : MonoBehaviour
             return;
 
         if (isAboutDelete) return;
+       
         if (other.name == "BigHeadCollider")
         {
             _spCollider.enabled = false;

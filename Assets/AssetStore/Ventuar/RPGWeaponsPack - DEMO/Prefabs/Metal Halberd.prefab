@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33058052662760944}
   - component: {fileID: 23451930312880104}
   - component: {fileID: 3947824606595728693}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Metal Halberd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,5 +93,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.324635, y: 6.6257915, z: 0.92}
-  m_Center: {x: 0.21848917, y: 7.25819, z: 0.008985132}
+  m_Size: {x: 1.1280344, y: 6.6257915, z: 0.28972712}
+  m_Center: {x: 0.045475066, y: 7.2581906, z: -0.0155297015}
